@@ -1,7 +1,15 @@
-import csv, math, os, datetime, tabulate
+import csv, math, os, datetime, tabulate, os
+
+def printHeading(statement):
+    # Using OS module to get width of screen    
+    terminal_width = os.get_terminal_size().columns
+    welcome_message = statement
+
+    print("\n" + "~" * terminal_width)
+    print(welcome_message.center(terminal_width))
+    print("~" * terminal_width + "\n")
 
 def showMenu():
-    print("\n\n\n\t><><><><><> ~HOTEL TRANSELVANIA~ <><><><><><")
     print("\n\t\t 1. ALL ROOM STATUS")
     print("\n\t\t 2. CHECK-IN")
     print("\n\t\t 3. CHECK-OUT")
@@ -140,13 +148,14 @@ def ageCheck():
         ageCheck()
 
 def contact():
-    print("\n\t\t"+"#@"*10+"DEVELOPER"+"#@"*10)
+    printHeading("Developer")
     print("\n\t\t Project Name: HOTEL TRANSELVANIA (HOTEL MANAGEMENT SYSTEM)")
     print("\n\t\t Language: Python")
 
 choice = 0
 checkRoomVacant(roomNo=101)
 while choice != 'NONE':
+    printHeading("HOTEL TRANSALVANIA")
     showMenu()
     choice = int(input("\t\t\t ENTER YOUR CHOICE: "))
     if choice == 1:
