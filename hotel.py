@@ -163,11 +163,14 @@ while choice != 'NONE':
     elif choice == 2:
         checkIn()
     elif choice == 3:
-        checkOut()
+        # checkOut()
+        print("Not currently working.")
     elif choice == 4:
-        otherExpense()
+        # otherExpense()
+        print("Not currently working.")
     elif choice == 5:
-        roomEnquiry()
+        # roomEnquiry()
+        print("Not currently working.")
     elif choice == 6:
         contact()
     elif choice == 0:
